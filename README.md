@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image7]: ./output_images/distored_straight_lines1.jpg "Distorted"
 
 [image2]: ./output_images/distored.jpg "Distorted chessboard"
-[image8]: ./output_images/undistored.jpg "udistorted chessboard"
+[image8]: ./output_images/undistored1.jpg "udistorted chessboard"
 
 [image3]: ./output_images/color_img.jpg "Binary example"
 [image9]: ./output_images/warped_img.jpg "Warped image"
@@ -49,7 +49,7 @@ The goals / steps of this project are the following:
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the third code cell of the IPython notebook located in "./examples/AdvancedLaneLines.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the third code cell of the IPython notebook located in "AdvancedLaneLines.ipynb" .  
 First I precompute points (0,0,0),(1,0,0)....(9,6,0). Then I load files from calibration folder. For each of them I applay gray scale and try to find (9,6) corners. If they are then I remember maping between precomputed corners and detected corners.
 Finally I use cv2 function calibrate cambera to use that mapings to perform calibration. Finally I can just use returned matrix to undistort images
 ``` python
